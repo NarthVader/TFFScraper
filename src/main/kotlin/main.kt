@@ -60,6 +60,9 @@ fun scrape() {
 //        run(driver)
 //    }
 //    viewCount(driver)
+
+    //runCatCreator(driver)
+
     driver.quit()
 }
 
