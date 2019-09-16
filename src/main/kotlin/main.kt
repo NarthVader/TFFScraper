@@ -52,13 +52,13 @@ fun scrape() {
     //////////////////////////////////////////////////
 
 
-    if(post) {
-        autoPost(driver, autoLogin, autoPassword)
-    } else if (price) {
-        priceChange(driver,birdName,newPrice)
-    } else {
-        run(driver)
-    }
+//    if(post) {
+//        autoPost(driver, autoLogin, autoPassword)
+//    } else if (price) {
+//        priceChange(driver,birdName,newPrice)
+//    } else {
+//        run(driver)
+//    }
 //    viewCount(driver)
     driver.quit()
 }
