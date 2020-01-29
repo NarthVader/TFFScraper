@@ -71,7 +71,7 @@ fun scrape() {
     else if (price) {
         priceChange(driver,birdName,newPrice)
     } else {
-        renewBirds(driver)
+        //renewBirds(driver)
         run(driver)
     }
 //    viewCount(driver)
@@ -96,12 +96,13 @@ fun run(driver: ChromeDriver) {
     val startTime = (start.hour*60) + start.minute
     println(start)
     //runClassifieds(driver)
-    for(i in 0..3) {
+    val i = start.dayOfMonth%4
+    println(i)
         runBirdsNow(driver,i)
 //        runAllHoobly(driver,i)
 
-        runOtherNowPets(driver,i)
-    }
+        //runOtherNowPets(driver,i)
+
     val end = LocalDateTime.now()
     val endTime = (end.hour*60) + end.minute
     val runTime = endTime - startTime
@@ -131,7 +132,7 @@ fun runBirdsNow(driver: ChromeDriver, i: Int) {
     runBirdsDEN(driver,i)
     runBirdsBAL(driver,i)
     runBirdsSTL(driver,i)
-    runBirdsTMP(driver,i)
+    runBirdsTMP(driver,i)//<=====
     runBirdsORL(driver,i)
     runBirdsRVR(driver,i)
     runBirdsKAN(driver,i)

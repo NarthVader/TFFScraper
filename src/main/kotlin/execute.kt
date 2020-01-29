@@ -820,6 +820,8 @@ fun executeBNPartial(driver: ChromeDriver,birds: IntArray,startIndex: Int) {
             val index = birds[i]
             //println("$i: " + index)
             driver.get("https://www.birdsnow.com/place_ad-adid-$index")
+            Thread.sleep(2000)
+            //updateComments(driver)
             driver.findElement(By.name("doContinue")).click()
             Thread.sleep(3000)
         }
@@ -835,6 +837,18 @@ fun executeBNPartial(driver: ChromeDriver,birds: IntArray,startIndex: Int) {
             println("Other Exceptions: $o")
         }
     }
+    Thread.sleep(3000)
+}
+
+fun updateComments(driver: ChromeDriver) {
+    Thread.sleep(3000)
+    driver.findElement(By.cssSelector("#comments")).clear()
+    Thread.sleep(3000)
+    driver.findElement(By.cssSelector("#comments")).sendKeys(newDescription)
+    Thread.sleep(3000)
+    driver.findElement(By.cssSelector("#shipping")).clear()
+    Thread.sleep(3000)
+    driver.findElement(By.cssSelector("#shipping")).sendKeys(newShipping)
     Thread.sleep(3000)
 }
 
@@ -902,6 +916,7 @@ fun executeAds(driver: ChromeDriver,ads:IntArray) {
     driver.findElement(By.xpath("//a[@href='/logout.php']")).click()
     Thread.sleep(1000)
 }
+
 
 
 

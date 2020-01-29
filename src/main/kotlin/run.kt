@@ -637,3 +637,4 @@ fun adsLogin(driver: ChromeDriver,user: String,pass: String) {
         println("Other Exceptions: $o")
     }
 }
+

@@ -75,3 +75,6 @@ val top40map: HashMap<String, Int> = hashMapOf("African Grey Parrot" to 594, "Af
     "Rosy Bourke's Parakeets" to 441, "Severe Chestnut Fronted Macaw" to 1168,
     "Conure - Sun" to 541, "Umbrella Cockatoo" to 1156, "Violet Indian Ringneck" to 1250, "White Canary" to 139,
     "Cockatiel - White-faced" to 525, "Lady Gouldian Finch - Yellow-back" to 250, "Yellow Canary" to 257, "Zebra Finch - Normal" to 115)
+
+val newShipping: String = "Shipping Notes: We safely ship nationwide to your local post office or nearest international airport. Some Parrots require airline shipping. Please contact us for details."
+val newDescription: String = "The Finch Farm .com offers a wide variety of birds from the smallest of finches to the worlds largest parrot. We ship nationwide to your local post office or nearest international airport in our climate controlled safety travel boxes. Some Parrots require airline shipping so please contact us for details. Estimated Delivery Times are posted on all birds offered on our website and Live arrival is guaranteed with an optional extended warranty on some species. Order online 24/7 or contact us by chat or phone 7 days a week."
