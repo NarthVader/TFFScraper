@@ -818,10 +818,9 @@ fun executeBNPartial(driver: ChromeDriver,birds: IntArray,startIndex: Int) {
     for (i in birdStart..birdEnd) {
         try {
             val index = birds[i]
-            //println("$i: " + index)
+            checkRenew(driver,index)
             driver.get("https://www.birdsnow.com/place_ad-adid-$index")
             Thread.sleep(2000)
-            //updateComments(driver)
             driver.findElement(By.name("doContinue")).click()
             Thread.sleep(3000)
         }

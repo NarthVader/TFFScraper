@@ -996,6 +996,18 @@ fun birdsNowSLCRenew(driver: ChromeDriver) {
     Thread.sleep(3000)
 }
 
+fun checkRenew(driver: ChromeDriver,bird: Int) {
+
+    driver.get("https://www.birdsnow.com/bird-ad-$bird")
+    Thread.sleep(2000)
+    val parent = driver.findElement(By.xpath("//li[.//b[text()='Time Remaining:']]"))
+    val ptext = parent.text
+    if(ptext.equals("Time Remaining: 0 day")) {
+        renewAd(driver,bird)
+    }
+    Thread.sleep(2000)
+}
+
 fun findRenew(driver: ChromeDriver, birds: IntArray): Int {
     var renewTotal = 0
 
