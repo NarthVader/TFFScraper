@@ -96,9 +96,12 @@ fun run(driver: ChromeDriver) {
     val startTime = (start.hour*60) + start.minute
     println(start)
     //runClassifieds(driver)
-    val i = start.dayOfMonth%4
-    println(i)
+    //val i = start.dayOfMonth%4
+    //println(i)
+    for(i in 0..3) {
         runBirdsNow(driver,i)
+    }
+
 //        runAllHoobly(driver,i)
 
         //runOtherNowPets(driver,i)
